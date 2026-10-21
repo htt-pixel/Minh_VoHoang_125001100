@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="TechStore - Cửa hàng điện tử & thiết bị công nghệ chính hãng hàng đầu Việt Nam. Cung cấp iPhone, MacBook, Apple Watch, AirPods với giá ưu đãi, bảo hành toàn diện.">
+  <meta name="keywords"
+    content="đồ điện tử, cửa hàng công nghệ, techstore, iphone 15 pro max, macbook pro, apple watch, airpods pro">
+  <meta name="author" content="TechStore Team">
+  <meta name="theme-color" content="#2563eb">
+
+  <title>TechStore - Cửa Hàng Đồ Điện Tử & Công Nghệ Cao Cấp</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 (Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Animate.css CDN (Hiệu ứng Hero Title & CTA bằng CSS thuần) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- File CSS chính của dự án (100% Pure CSS - Không JavaScript) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Nút hỗ trợ người khiếm thị chuyển nhanh đến nội dung chính (Skip to Content) -->
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+
+  <!-- ======================================================================
+       1. THANH THÔNG BÁO TOP BAR (<ASIDE>)
+       ====================================================================== -->
+  <aside class="top-bar" aria-label="Thông báo ưu đãi sự kiện">
+    <div class="container top-bar-inner">
+      <div class="top-bar-msg">
+        <i class="fa-solid fa-bolt top-bar-icon" aria-hidden="true"></i>
+        <span><strong>SIÊU HỘI CÔNG NGHỆ:</strong> Giảm ngay đến 40% cho Học sinh - Sinh viên. Giao hỏa tốc 2H!</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="#about" class="top-bar-link"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> 100% Chính
+          hãng</a>
+        <a href="#contact" class="top-bar-link"><i class="fa-solid fa-headset" aria-hidden="true"></i> Hotline: 1900
+          8888</a>
+        <a href="#" class="top-bar-link"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Hệ thống 50
+          Showroom</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       2. HEADER CHÍNH & THANH ĐIỀU HƯỚNG (<HEADER>, <NAV>)
+       ====================================================================== -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo cửa hàng -->
+        <a href="index.html" class="brand-logo" aria-label="Trang chủ TechStore">
+          <img src="assets/images/logo.png" class="brand-img" alt="TechStore Logo" width="160" height="44">
+          <span class="brand-text">TECH<span class="brand-accent">STORE</span></span>
+        </a>
+
+        <!-- Thanh tìm kiếm thông minh (HTML5 Form thuần) -->
+        <form class="search-form" role="search" action="#products" method="get" aria-label="Tìm kiếm sản phẩm">
+          <div class="search-input-wrap">
+            <input type="search" id="searchInput" name="q" class="search-input"
+              placeholder="Tìm kiếm iPhone 15, MacBook Pro M3, AirPods..." aria-label="Nhập từ khóa tìm kiếm sản phẩm">
+            <button type="submit" class="search-btn" aria-label="Bấm để tìm kiếm">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Nhóm nút tác vụ Header (Wishlist, Giỏ hàng, Đăng nhập) -->
+        <div class="header-actions">
+          <a href="#products" class="action-btn" aria-label="Danh sách yêu thích">
+            <div class="action-icon-wrap">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              <span class="badge-count" aria-label="0 sản phẩm yêu thích">0</span>
+            </div>
+            <span>Yêu thích</span>
+          </a>
+
+          <a href="#products" class="action-btn" aria-label="Giỏ hàng hiện tại">
+            <div class="action-icon-wrap">
+              <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+              <span class="badge-count" aria-label="0 sản phẩm trong giỏ">0</span>
+            </div>
+            <span>Giỏ hàng</span>
+          </a>
+
+          <a href="#newsletter" class="btn btn-login btn--login" aria-label="Đăng nhập tài khoản cá nhân">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <span>Tài khoản</span>
+          </a>
+
+          <!-- Nút bật tắt Menu Mobile bằng CSS thuần (Checkbox Hack) -->
+          <label for="mobileMenuToggle" class="mobile-toggle" aria-label="Mở menu điều hướng di động">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkbox ẩn để kích hoạt menu mobile bằng CSS thuần (Không dùng JavaScript) -->
+    <input type="checkbox" id="mobileMenuToggle" class="mobile-menu-checkbox" aria-label="Bật tắt menu mobile">
+
+    <!-- Thanh menu điều hướng chính (<nav>) -->
+    <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính website">
+      <div class="container">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active"><i class="fa-solid fa-house" aria-hidden="true"></i> Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a href="#categories" class="nav-link"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Danh
+              mục</a>
+          </li>
+          <li class="nav-item">
+            <a href="#products" class="nav-link">
+              <i class="fa-solid fa-laptop" aria-hidden="true"></i> Sản phẩm
+              <span class="nav-hot-badge">Hot</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#promotions" class="nav-link"><i class="fa-solid fa-tag" aria-hidden="true"></i> Khuyến mãi</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Liên hệ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ======================================================================
+       3. KHUNG CHỨA NỘI DUNG CỐT LÕI CỦA TRANG WEB (<MAIN>)
+       ====================================================================== -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- SECTION 1: HERO BANNER CHÍNH (<SECTION>) -->
+    <section class="hero-section" id="home" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-wrapper">
+          <!-- Cột nội dung Hero Text với hiệu ứng CSS Animate.css -->
+          <div class="hero-content">
+            <div class="hero-pill animate__animated animate__fadeInDown">
+              <i class="fa-solid fa-bolt" aria-hidden="true"></i> Siêu Phẩm Công Nghệ Đỉnh Cao 2026
+            </div>
+
+            <h1 class="hero-title animate__animated animate__fadeInDown" id="hero-title">
+              Khám Phá Kỷ Nguyên <br>
+              <span class="gradient-text">Thiết Bị Điện Tử Tương Lai</span>
+            </h1>
+
+            <p class="hero-desc animate__animated animate__fadeInUp animate__delay-1s">
+              Trải nghiệm hệ sinh thái công nghệ đẳng cấp nhất với iPhone 15 Pro Max, MacBook Pro M3, Apple Watch và phụ
+              kiện âm thanh đỉnh cao. Cam kết 100% hàng chính hãng, bảo hành toàn diện 24 tháng.
+            </p>
+
+            <!-- Nhóm nút CTA với CSS Transition & Animation -->
+            <div class="hero-actions animate__animated animate__zoomIn animate__delay-1s">
+              <a href="#products" class="btn btn-primary btn--primary">
+                <span>Khám Phá Sản Phẩm</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#promotions" class="btn btn-secondary btn--secondary">
+                <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                <span>Săn Deal Hôm Nay</span>
+              </a>
+            </div>
+
+            <!-- Thanh cam kết uy tín -->
+            <div class="hero-trust-bar animate__animated animate__fadeIn animate__delay-1s">
+              <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+                <div class="trust-text">
+                  <strong>100% Chính Hãng</strong>
+                  <span>Bảo hành ủy quyền</span>
+                </div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></div>
+                <div class="trust-text">
+                  <strong>Giao Nhanh 2 Giờ</strong>
+                  <span>Miễn phí toàn quốc</span>
+                </div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i></div>
+                <div class="trust-text">
+                  <strong>1 Đổi 1 Trong 30 Ngày</strong>
+                  <span>Lỗi đổi mới an tâm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột hiển thị thẻ Showcase kính mờ (Glassmorphism) -->
+          <aside class="hero-card-showcase animate__animated animate__fadeInRight"
+            aria-label="Sản phẩm công nghệ nổi bật">
+            <div class="showcase-glass-card">
+              <span class="showcase-tag"><i class="fa-solid fa-crown" aria-hidden="true"></i> Bán Chạy Nhất 2026</span>
+              <div class="showcase-img-wrap">
+                <img src="assets/images/products/iphone-15.jpg" alt="iPhone 15 Pro Max Titanium tự nhiên" width="300"
+                  height="300">
+              </div>
+              <h3 class="showcase-title">iPhone 15 Pro Max 256GB</h3>
+              <p class="showcase-price">29.490.000₫ <del class="showcase-old-price">34.990.000₫</del></p>
+              <a href="#products" class="btn btn-primary btn--primary"
+                aria-label="Đặt mua ngay iPhone 15 Pro Max 256GB">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Đặt Mua Ngay
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: KHỐI TIỆN ÍCH DỊCH VỤ (<SECTION>) -->
+    <section class="features-section" aria-labelledby="features-heading">
+      <div class="container">
+        <!-- Tiêu đề ẩn hỗ trợ cấu trúc Accessibility & Screen Reader -->
+        <h2 id="features-heading" class="sr-only">Cam kết dịch vụ và quyền lợi khách hàng TechStore</h2>
+        <ul class="features-grid">
+          <li class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-truck-ramp-box" aria-hidden="true"></i></div>
+            <div class="feature-info">
+              <h3 class="feature-title">Giao Hàng Siêu Tốc</h3>
+              <p class="feature-desc">Miễn phí vận chuyển cho đơn hàng từ 500k</p>
+            </div>
+          </li>
+          <li class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-shield-check" aria-hidden="true"></i></div>
+            <div class="feature-info">
+              <h3 class="feature-title">Bảo Hành 12 - 24 Tháng</h3>
+              <p class="feature-desc">Cam kết phụ kiện & máy chính hãng 100%</p>
+            </div>
+          </li>
+          <li class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></div>
+            <div class="feature-info">
+              <h3 class="feature-title">Đổi Trả Dễ Dàng</h3>
+              <p class="feature-desc">1 đổi 1 trong vòng 30 ngày nếu phát sinh lỗi</p>
+            </div>
+          </li>
+          <li class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
+            <div class="feature-info">
+              <h3 class="feature-title">Chuyên Gia Hỗ Trợ 24/7</h3>
+              <p class="feature-desc">Tư vấn kỹ thuật và kỹ sư phục vụ tận tâm</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 3: DANH MỤC NỔI BẬT (<SECTION> CATEGORIES) -->
+    <section class="categories-section" id="categories" aria-labelledby="categories-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Danh Mục Tuyển
+            Chọn</span>
+          <h2 class="section-title" id="categories-heading">Khám Phá Theo Nhóm Thiết Bị</h2>
+          <p class="section-desc">Lựa chọn các dòng thiết bị điện tử đỉnh cao phục vụ học tập, công việc và giải trí
+            chuyên nghiệp.</p>
+        </header>
+
+        <div class="categories-grid">
+          <!-- Danh mục 1: Điện thoại thông minh -->
+          <a href="#products" class="category-card">
+            <div class="category-thumb">
+              <img src="assets/images/categories/phone-cat.jpg" class="category-img"
+                alt="Danh mục Điện Thoại Thông Minh" width="300" height="190" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <div>
+                <h3 class="category-title">Điện Thoại Thông Minh</h3>
+                <span class="category-count">128+ sản phẩm công nghệ</span>
+              </div>
+              <div class="category-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+
+          <!-- Danh mục 2: Laptop & Máy tính -->
+          <a href="#products" class="category-card">
+            <div class="category-thumb">
+              <img src="assets/images/categories/laptop-cat.jpg" class="category-img"
+                alt="Danh mục Laptop & Máy Tính Cao Cấp" width="300" height="190" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <div>
+                <h3 class="category-title">Laptop & Ultrabook</h3>
+                <span class="category-count">85+ sản phẩm hiệu năng cao</span>
+              </div>
+              <div class="category-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+
+          <!-- Danh mục 3: Đồng hồ thông minh -->
+          <a href="#products" class="category-card">
+            <div class="category-thumb">
+              <img src="assets/images/products/apple-watch.jpg" class="category-img" alt="Danh mục Đồng Hồ Thông Minh"
+                width="300" height="190" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <div>
+                <h3 class="category-title">Đồng Hồ Thông Minh</h3>
+                <span class="category-count">64+ sản phẩm thời trang</span>
+              </div>
+              <div class="category-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+
+          <!-- Danh mục 4: Thiết bị âm thanh -->
+          <a href="#products" class="category-card">
+            <div class="category-thumb">
+              <img src="assets/images/products/airpods-pro.jpg" class="category-img" alt="Danh mục Tai Nghe & Âm Thanh"
+                width="300" height="190" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <div>
+                <h3 class="category-title">Tai Nghe & Âm Thanh</h3>
+                <span class="category-count">92+ sản phẩm chống ồn</span>
+              </div>
+              <div class="category-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: DANH SÁCH SẢN PHẨM ĐIỆN TỬ (<SECTION> PRODUCTS) -->
+    <section class="products-section" id="products" aria-labelledby="products-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Sản Phẩm Bán Chạy</span>
+          <h2 class="section-title" id="products-heading">Thiết Bị Điện Tử Đột Phá</h2>
+          <p class="section-desc">Tuyển tập những siêu phẩm đồ điện tử được đánh giá cao nhất bởi khách hàng và giới
+            chuyên gia.</p>
+        </header>
+
+        <!-- Bộ lọc sản phẩm tương tác nhanh với Accessibility role -->
+        <div class="filter-tabs" role="tablist" aria-label="Bộ lọc danh mục sản phẩm">
+          <a href="#products" role="tab" class="filter-btn active">Tất Cả</a>
+          <a href="#products" role="tab" class="filter-btn">Điện Thoại</a>
+          <a href="#products" role="tab" class="filter-btn">Laptop</a>
+          <a href="#products" role="tab" class="filter-btn">Smartwatch</a>
+          <a href="#products" role="tab" class="filter-btn">Âm Thanh</a>
+        </div>
+
+        <!-- Lưới sản phẩm chuẩn CSS Grid kết hợp các thẻ ngữ nghĩa <article> -->
+        <div class="products-grid" id="productsGrid">
+
+          <!-- SẢN PHẨM 1: iPhone 15 Pro Max (<article>) -->
+          <article class="product-card" data-category="phone" aria-labelledby="prod-1-title">
+            <div class="product-badges">
+              <span class="badge badge-hot badge--hot">Hot</span>
+              <span class="badge badge-sale badge--sale">-15%</span>
+            </div>
+
+            <a href="#products" class="btn-wishlist" aria-label="Lưu iPhone 15 Pro Max vào danh sách yêu thích">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </a>
+
+            <div class="product-media">
+              <img src="assets/images/products/iphone-15.jpg" class="product-img"
+                alt="iPhone 15 Pro Max 256GB Chính Hãng VN/A" width="300" height="300" loading="lazy">
+            </div>
+
+            <div class="product-content">
+              <span class="product-category">Điện Thoại Apple</span>
+              <h3 class="product-name" id="prod-1-title">
+                <a href="#products">iPhone 15 Pro Max 256GB - Khung Titan Tự Nhiên</a>
+              </h3>
+
+              <div class="product-rating">
+                <span class="stars" aria-hidden="true">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating-count" aria-label="5 trên 5 sao từ 158 đánh giá">(158 đánh giá)</span>
+              </div>
+
+              <div class="product-specs">
+                <span class="spec-pill">Chip A17 Pro</span>
+                <span class="spec-pill">Màn OLED 120Hz</span>
+                <span class="spec-pill">Camera 48MP</span>
+              </div>
+
+              <div class="product-pricing">
+                <span class="price-current" aria-label="Giá hiện tại: 29.490.000 đồng">29.490.000₫</span>
+                <del class="price-old" aria-label="Giá gốc: 34.990.000 đồng">34.990.000₫</del>
+                <span class="price-discount">-15%</span>
+              </div>
+
+              <a href="#products" class="btn btn-add-cart btn--cart"
+                aria-label="Thêm iPhone 15 Pro Max 256GB vào giỏ hàng">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Thêm Vào Giỏ
+              </a>
+            </div>
+          </article>
+
+          <!-- SẢN PHẨM 2: MacBook Pro 14 M3 Pro (<article>) -->
+          <article class="product-card" data-category="laptop" aria-labelledby="prod-2-title">
+            <div class="product-badges">
+              <span class="badge badge-new badge--new">Mới Ra Mắt</span>
+              <span class="badge badge-sale badge--sale">-8%</span>
+            </div>
+
+            <a href="#products" class="btn-wishlist" aria-label="Lưu MacBook Pro 14 vào danh sách yêu thích">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </a>
+
+            <div class="product-media">
+              <img src="assets/images/products/macbook-pro.jpg" class="product-img"
+                alt="MacBook Pro 14 inch M3 Pro 18GB/512GB" width="300" height="300" loading="lazy">
+            </div>
+
+            <div class="product-content">
+              <span class="product-category">Laptop Apple</span>
+              <h3 class="product-name" id="prod-2-title">
+                <a href="#products">MacBook Pro 14 inch M3 Pro (18GB / 512GB SSD) Space Black</a>
+              </h3>
+
+              <div class="product-rating">
+                <span class="stars" aria-hidden="true">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </span>
+                <span class="rating-count" aria-label="4.5 trên 5 sao từ 94 đánh giá">(94 đánh giá)</span>
+              </div>
+
+              <div class="product-specs">
+                <span class="spec-pill">Apple M3 Pro</span>
+                <span class="spec-pill">RAM 18GB</span>
+                <span class="spec-pill">Liquid Retina XDR</span>
+              </div>
+
+              <div class="product-pricing">
+                <span class="price-current" aria-label="Giá hiện tại: 49.990.000 đồng">49.990.000₫</span>
+                <del class="price-old" aria-label="Giá gốc: 54.500.000 đồng">54.500.000₫</del>
+                <span class="price-discount">-8%</span>
+              </div>
+
+              <a href="#products" class="btn btn-add-cart btn--cart"
+                aria-label="Thêm MacBook Pro 14 M3 Pro vào giỏ hàng">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Thêm Vào Giỏ
+              </a>
+            </div>
+          </article>
+
+          <!-- SẢN PHẨM 3: Apple Watch Series 9 GPS (<article>) -->
+          <article class="product-card" data-category="watch" aria-labelledby="prod-3-title">
+            <div class="product-badges">
+              <span class="badge badge-sale badge--sale">-20%</span>
+            </div>
+
+            <a href="#products" class="btn-wishlist" aria-label="Lưu Apple Watch Series 9 vào danh sách yêu thích">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </a>
+
+            <div class="product-media">
+              <img src="assets/images/products/apple-watch.jpg" class="product-img"
+                alt="Apple Watch Series 9 GPS 45mm Viền Nhôm" width="300" height="300" loading="lazy">
+            </div>
+
+            <div class="product-content">
+              <span class="product-category">Đồng Hồ Thông Minh</span>
+              <h3 class="product-name" id="prod-3-title">
+                <a href="#products">Apple Watch Series 9 GPS 45mm Viền Nhôm Dây Thể Thao</a>
+              </h3>
+
+              <div class="product-rating">
+                <span class="stars" aria-hidden="true">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating-count" aria-label="5 trên 5 sao từ 82 đánh giá">(82 đánh giá)</span>
+              </div>
+
+              <div class="product-specs">
+                <span class="spec-pill">Chip S9 SiP</span>
+                <span class="spec-pill">Cử Chỉ Chạm Đúp</span>
+                <span class="spec-pill">Đo SpO2 & ECG</span>
+              </div>
+
+              <div class="product-pricing">
+                <span class="price-current" aria-label="Giá hiện tại: 9.990.000 đồng">9.990.000₫</span>
+                <del class="price-old" aria-label="Giá gốc: 12.490.000 đồng">12.490.000₫</del>
+                <span class="price-discount">-20%</span>
+              </div>
+
+              <a href="#products" class="btn btn-add-cart btn--cart"
+                aria-label="Thêm Apple Watch Series 9 vào giỏ hàng">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Thêm Vào Giỏ
+              </a>
+            </div>
+          </article>
+
+          <!-- SẢN PHẨM 4: AirPods Pro 2 USB-C (<article>) -->
+          <article class="product-card" data-category="audio" aria-labelledby="prod-4-title">
+            <div class="product-badges">
+              <span class="badge badge-hot badge--hot">Bán Chạy</span>
+              <span class="badge badge-sale badge--sale">-12%</span>
+            </div>
+
+            <a href="#products" class="btn-wishlist" aria-label="Lưu AirPods Pro 2 vào danh sách yêu thích">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </a>
+
+            <div class="product-media">
+              <img src="assets/images/products/airpods-pro.jpg" class="product-img"
+                alt="AirPods Pro Gen 2 MagSafe Hộp Sạc USB-C" width="300" height="300" loading="lazy">
+            </div>
+
+            <div class="product-content">
+              <span class="product-category">Tai Nghe Không Dây</span>
+              <h3 class="product-name" id="prod-4-title">
+                <a href="#products">Tai nghe AirPods Pro 2 MagSafe (USB-C) Chống Ồn Chủ Động</a>
+              </h3>
+
+              <div class="product-rating">
+                <span class="stars" aria-hidden="true">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <span class="rating-count" aria-label="5 trên 5 sao từ 215 đánh giá">(215 đánh giá)</span>
+              </div>
+
+              <div class="product-specs">
+                <span class="spec-pill">Chip Apple H2</span>
+                <span class="spec-pill">Chống Ồn 2X</span>
+                <span class="spec-pill">Âm Thanh 3D</span>
+              </div>
+
+              <div class="product-pricing">
+                <span class="price-current" aria-label="Giá hiện tại: 5.490.000 đồng">5.490.000₫</span>
+                <del class="price-old" aria-label="Giá gốc: 6.290.000 đồng">6.290.000₫</del>
+                <span class="price-discount">-12%</span>
+              </div>
+
+              <a href="#products" class="btn btn-add-cart btn--cart" aria-label="Thêm AirPods Pro 2 vào giỏ hàng">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Thêm Vào Giỏ
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FLASH SALE & KHỐI ƯU ĐÃI ĐẶC BIỆT (<SECTION> PROMOTIONS) -->
+    <section class="promo-section" id="promotions" aria-labelledby="promo-heading">
+      <div class="container">
+        <div class="promo-card">
+          <div class="promo-content">
+            <div class="promo-text">
+              <span class="promo-badge"><i class="fa-solid fa-fire" aria-hidden="true"></i> SỰ KIỆN GIỚI HẠN</span>
+              <h2 class="promo-title" id="promo-heading">Flash Sale Công Nghệ - Giảm Sốc Đến 50%</h2>
+              <p class="promo-desc">
+                Cơ hội sở hữu siêu phẩm công nghệ với giá không tưởng. Tặng kèm gói bảo hành rơi vỡ 1 năm và trả góp 0%
+                lãi suất qua thẻ tín dụng.
+              </p>
+            </div>
+
+            <!-- Đồng hồ đếm ngược Flash Sale hiển thị chuẩn Semantic <time> -->
+            <div class="countdown-box" aria-label="Thời gian diễn ra sự kiện Flash Sale trong ngày">
+              <div class="time-unit">
+                <span class="time-number">08</span>
+                <span class="time-label">Giờ</span>
+              </div>
+              <span class="countdown-colon" aria-hidden="true">:</span>
+              <div class="time-unit">
+                <span class="time-number">45</span>
+                <span class="time-label">Phút</span>
+              </div>
+              <span class="countdown-colon" aria-hidden="true">:</span>
+              <div class="time-unit">
+                <span class="time-number">30</span>
+                <span class="time-label">Giây</span>
+              </div>
+            </div>
+
+            <a href="#products" class="btn btn-primary btn--primary" aria-label="Săn deal flash sale ngay bây giờ">
+              <i class="fa-solid fa-bolt" aria-hidden="true"></i> Săn Deal Ngay
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: GIỚI THIỆU THƯƠNG HIỆU TECHSTORE (<SECTION> ABOUT) -->
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-info">
+            <span class="section-tag"><i class="fa-solid fa-gem" aria-hidden="true"></i> Về Chúng Tôi</span>
+            <h2 class="about-title" id="about-heading">Tiên Phong Công Nghệ, Vững Vàng Niềm Tin Khách Hàng</h2>
+            <p class="about-desc">
+              Được thành lập từ năm 2016, <strong>TechStore</strong> tự hào là đối tác bán lẻ ủy quyền chính thức của
+              các tập đoàn công nghệ hàng đầu thế giới như Apple, Sony, Samsung, Asus và Dell tại Việt Nam.
+            </p>
+            <p class="about-desc">
+              Chúng tôi không chỉ cung cấp những sản phẩm công nghệ tiên tiến nhất với mức giá cạnh tranh, mà còn mang
+              đến trải nghiệm mua sắm chuẩn quốc tế với dịch vụ tư vấn kỹ thuật tận tình và chế độ hậu mãi vượt trội.
+            </p>
+
+            <ul class="about-highlights">
+              <li class="highlight-item">
+                <i class="fa-solid fa-circle-check highlight-icon" aria-hidden="true"></i>
+                <div>
+                  <h3 class="highlight-title">100% Nhập Khẩu Chính Hãng</h3>
+                  <p class="highlight-desc">Đầy đủ hóa đơn VAT và bảo hành hãng</p>
+                </div>
+              </li>
+              <li class="highlight-item">
+                <i class="fa-solid fa-circle-check highlight-icon" aria-hidden="true"></i>
+                <div>
+                  <h3 class="highlight-title">Trả Góp 0% Lãi Suất</h3>
+                  <p class="highlight-desc">Thủ tục xét duyệt online chỉ 5 phút</p>
+                </div>
+              </li>
+              <li class="highlight-item">
+                <i class="fa-solid fa-circle-check highlight-icon" aria-hidden="true"></i>
+                <div>
+                  <h3 class="highlight-title">Kỹ Thuật Viên Chuyên Nghiệp</h3>
+                  <p class="highlight-desc">Hỗ trợ setup, cài đặt dữ liệu miễn phí</p>
+                </div>
+              </li>
+              <li class="highlight-item">
+                <i class="fa-solid fa-circle-check highlight-icon" aria-hidden="true"></i>
+                <div>
+                  <h3 class="highlight-title">Bảo Trì Trọn Đời Sản Phẩm</h3>
+                  <p class="highlight-desc">Vệ sinh máy và kiểm tra định kỳ miễn phí</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bảng số liệu thống kê thành tựu chuẩn semantic <ul> -->
+          <ul class="stats-card" aria-label="Số liệu thống kê thành tựu TechStore">
+            <li class="stat-box">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Năm Uy Tín Hàng Đầu</span>
+            </li>
+            <li class="stat-box">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Showroom Toàn Quốc</span>
+            </li>
+            <li class="stat-box">
+              <span class="stat-number">500K+</span>
+              <span class="stat-label">Khách Hàng Hài Lòng</span>
+            </li>
+            <li class="stat-box">
+              <span class="stat-number">99.8%</span>
+              <span class="stat-label">Đánh Giá Tích Cực</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: ĐĂNG KÝ NHẬN TIN & ƯU ĐÃI (<SECTION> NEWSLETTER) -->
+    <section class="newsletter-section" id="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-inner">
+            <span class="section-tag section-tag--inverted">
+              <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i> Đặc Quyền Thành Viên
+            </span>
+            <h2 class="newsletter-title" id="newsletter-heading">Nhận Ngay Voucher 500.000₫ Cho Đơn Hàng Đầu Tiên</h2>
+            <p class="newsletter-desc">Đăng ký nhận bản tin công nghệ để không bỏ lỡ đợt mở bán sớm sản phẩm mới và các
+              chương trình khuyến mãi độc quyền từ TechStore.</p>
+
+            <form class="newsletter-form" action="#newsletter" method="post" aria-label="Đăng ký nhận email ưu đãi">
+              <input type="email" id="newsletterEmail" name="email" class="newsletter-input"
+                placeholder="Nhập địa chỉ email của bạn..." required autocomplete="email"
+                aria-label="Địa chỉ email nhận khuyến mãi">
+              <button type="submit" class="btn btn-submit btn--dark" aria-label="Gửi email đăng ký bản tin">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Đăng Ký Ngay
+              </button>
+            </form>
+
+            <small class="newsletter-note">
+              <i class="fa-solid fa-lock" aria-hidden="true"></i> Chúng tôi tôn trọng quyền riêng tư và cam kết không
+              gửi thư rác. Bạn có thể hủy nhận tin bất kỳ lúc nào.
+            </small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       4. CHÂN TRANG (<FOOTER>)
+       ====================================================================== -->
+  <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Cột 1: Thông tin liên hệ cửa hàng -->
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand-logo footer-brand-logo" aria-label="Trang chủ TechStore">
+            <img src="assets/images/logo.png" class="brand-img" alt="TechStore Logo" width="160" height="44">
+            <span class="brand-text brand-text--light">TECH<span class="brand-accent">STORE</span></span>
+          </a>
+          <p class="footer-desc">
+            Hệ thống cửa hàng phân phối đồ điện tử, thiết bị công nghệ chính hãng hàng đầu tại Việt Nam. Đồng hành nâng
+            tầm phong cách sống số hiện đại.
+          </p>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-location-dot footer-contact-icon" aria-hidden="true"></i>
+              <span>Tòa nhà Tech Innovation, Số 88 Đường Công Nghệ, Quận 1, TP. Hồ Chí Minh</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-phone footer-contact-icon" aria-hidden="true"></i>
+              <span>Hotline mua hàng: <strong>1900 8888</strong> (8:00 - 22:00)</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fa-solid fa-envelope footer-contact-icon" aria-hidden="true"></i>
+              <span>Hỗ trợ khách hàng: <strong>contact@techstore.vn</strong></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cột 2: Danh mục sản phẩm -->
+        <div class="footer-col">
+          <h3 class="footer-title">Danh Mục Thiết Bị</h3>
+          <ul class="footer-links">
+            <li><a href="#products" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                iPhone & Smartphone</a></li>
+            <li><a href="#products" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                MacBook & Laptop Gaming</a></li>
+            <li><a href="#products" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                Apple Watch & Smartwatch</a></li>
+            <li><a href="#products" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                AirPods & Tai Nghe Hi-Res</a></li>
+            <li><a href="#products" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Màn
+                Hình Đồ Họa 4K</a></li>
+            <li><a href="#products" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Cáp
+                Sạc & Củ Sạc GaN</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Chính sách & Hỗ trợ -->
+        <div class="footer-col">
+          <h3 class="footer-title">Chính Sách & Hỗ Trợ</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Chính Sách
+                Bảo Hành Chính Hãng</a></li>
+            <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Quy Định
+                Đổi Trả Trong 30 Ngày</a></li>
+            <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Hướng Dẫn
+                Mua Trả Góp 0%</a></li>
+            <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Chính Sách
+                Vận Chuyển Hỏa Tốc</a></li>
+            <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Bảo Mật
+                Thông Tin Khách Hàng</a></li>
+            <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Tra Cứu Hóa
+                Đơn Điện Tử</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 4: Mạng xã hội & Phương thức thanh toán -->
+        <div class="footer-col">
+          <h3 class="footer-title">Kết Nối Với Chúng Tôi</h3>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" aria-label="Facebook TechStore" target="_blank"
+              rel="noopener noreferrer"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://youtube.com" class="social-btn" aria-label="YouTube TechStore" target="_blank"
+              rel="noopener noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a href="https://tiktok.com" class="social-btn" aria-label="TikTok TechStore" target="_blank"
+              rel="noopener noreferrer"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            <a href="https://instagram.com" class="social-btn" aria-label="Instagram TechStore" target="_blank"
+              rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          </div>
+
+          <h3 class="footer-title footer-title--spacing">Phương Thức Thanh Toán</h3>
+          <div class="payment-badges">
+            <span class="payment-badge"><i class="fa-brands fa-cc-visa" aria-hidden="true"></i> VISA</span>
+            <span class="payment-badge"><i class="fa-brands fa-cc-mastercard" aria-hidden="true"></i> Master</span>
+            <span class="payment-badge"><i class="fa-solid fa-qrcode" aria-hidden="true"></i> VNPAY-QR</span>
+            <span class="payment-badge"><i class="fa-solid fa-wallet" aria-hidden="true"></i> MoMo</span>
+            <span class="payment-badge"><i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i> COD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bản quyền chân trang -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 TechStore. Dự án mẫu môn Thiết kế Web chuẩn Semantic HTML5 & Responsive CSS Grid. All rights
+          reserved.</p>
+        <p>Bảo hành & Hỗ trợ kỹ thuật: <a href="tel:19008888" class="footer-bottom-link">1900 8888</a> • Email: <a
+            href="mailto:contact@techstore.vn" class="footer-bottom-link">contact@techstore.vn</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       5. NÚT CUỘN LÊN ĐẦU TRANG (HTML/CSS THUẦN - SMOOTH SCROLL)
+       ====================================================================== -->
+  <a href="#siteHeader" class="back-to-top" aria-label="Cuộn lên đầu trang">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+</body>
+
+</html>
